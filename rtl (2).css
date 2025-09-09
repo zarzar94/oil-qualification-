@@ -1,0 +1,4 @@
+html[dir='rtl'], body[dir='rtl'] {
+  direction: rtl;
+  text-align: right;
+}
