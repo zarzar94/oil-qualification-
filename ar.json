@@ -1,0 +1,10 @@
+{
+  "app.title": "لوحة المراجعة",
+  "nav.review_queue": "قائمة المراجعة",
+  "actions.review": "راجع",
+  "actions.assign": "تعيين",
+  "actions.view": "عرض",
+  "actions.request_changes": "طلب تعديلات",
+  "actions.reject": "رفض",
+  "actions.approve": "موافقة"
+}

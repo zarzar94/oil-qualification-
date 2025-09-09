@@ -1,0 +1,10 @@
+{
+  "app.title": "Review Dashboard",
+  "nav.review_queue": "Review Queue",
+  "actions.review": "Review",
+  "actions.assign": "Assign",
+  "actions.view": "View",
+  "actions.request_changes": "Request Changes",
+  "actions.reject": "Reject",
+  "actions.approve": "Approve"
+}
