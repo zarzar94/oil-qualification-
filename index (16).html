@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Administrative Review Interface - Syrian Ministry of Oil</title>
+
+<link href="assets/styles.css" rel="stylesheet"/></head>
+<body>
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<div class="sidebar-logo">
+<div class="logo-icon">⛽</div>
+<div>
+<h3 style="font-size: 16px; margin-bottom: 2px;">Ministry of Oil</h3>
+<p style="font-size: 12px; opacity: 0.7;">Review Dashboard</p>
+</div>
+</div>
+</div>
+<nav class="sidebar-nav">
+<a class="nav-item active" href="#">
+<span class="nav-icon">📊</span>
+<span>Dashboard</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">📝</span>
+<span>Applications</span>
+<span class="nav-badge">12</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">👥</span>
+<span>Review Queue</span>
+<span class="nav-badge">5</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">✅</span>
+<span>Approved</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">❌</span>
+<span>Rejected</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">📈</span>
+<span>Analytics</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">📄</span>
+<span>Reports</span>
+</a>
+<a class="nav-item" href="#">
+<span class="nav-icon">⚙️</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<div class="main-content">
+<!-- Topbar -->
+<header class="topbar">
+<div class="search-bar">
+<span>🔍</span>
+<input placeholder="Search applications..." type="text"/>
+</div>
+<div class="topbar-actions">
+<div class="notification-icon">
+<span>🔔</span>
+<span class="notification-dot"></span>
+</div>
+<div class="user-menu">
+<div class="user-avatar">JD</div>
+<div>
+<div style="font-size: 14px; font-weight: 600;">John Doe</div>
+<div style="font-size: 12px; color: #95a5a6;">Senior Reviewer</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="content">
+<!-- Statistics Cards -->
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-header">
+<div class="stat-icon primary">📥</div>
+</div>
+<div class="stat-value">23</div>
+<div class="stat-label">Pending Review</div>
+<div class="stat-change positive">
+<span>↑</span>
+<span>12% from last week</span>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<div class="stat-icon warning">⏱️</div>
+</div>
+<div class="stat-value">7.5</div>
+<div class="stat-label">Avg. Review Time (days)</div>
+<div class="stat-change positive">
+<span>↓</span>
+<span>2 days faster</span>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<div class="stat-icon success">✓</div>
+</div>
+<div class="stat-value">156</div>
+<div class="stat-label">Total Approved</div>
+<div class="stat-change positive">
+<span>↑</span>
+<span>8% this month</span>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<div class="stat-icon danger">⚠️</div>
+</div>
+<div class="stat-value">5</div>
+<div class="stat-label">High Priority</div>
+<div class="stat-change negative">
+<span>↑</span>
+<span>2 new today</span>
+</div>
+</div>
+</div>
+<!-- Applications Table -->
+<div class="applications-section">
+<div class="section-header">
+<h2 class="section-title">Review Queue</h2>
+<div class="filter-tabs">
+<button class="filter-tab active">All</button>
+<button class="filter-tab">Assigned to Me</button>
+<button class="filter-tab">High Priority</button>
+<button class="filter-tab">Expiring Soon</button>
+</div>
+</div>
+<table class="applications-table">
+<thead>
+<tr>
+<th>Application ID</th>
+<th>Company</th>
+<th>Status</th>
+<th>Priority</th>
+<th>Submitted</th>
+<th>Deadline</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SYR-2025-00124</strong></td>
+<td>
+<div class="company-info">
+<div class="company-avatar">PT</div>
+<div class="company-details">
+<strong>PetroTech Solutions</strong>
+<small>International Joint Venture</small>
+</div>
+</div>
+</td>
+<td><span class="status-badge status-reviewing">Under Review</span></td>
+<td>
+<div class="priority-indicator priority-high">
+<span class="priority-dot"></span>
+<span>High</span>
+</div>
+</td>
+<td>Jan 15, 2025</td>
+<td>Jan 25, 2025</td>
+<td>
+<div class="table-actions">
+<button class="action-btn primary" onclick="openReviewModal()">Review</button>
+<button class="action-btn secondary">Assign</button>
+</div>
+</td>
+</tr>
+<tr>
+<td><strong>SYR-2025-00123</strong></td>
+<td>
+<div class="company-info">
+<div class="company-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">GE</div>
+<div class="company-details">
+<strong>Global Energy Corp</strong>
+<small>Syrian Company</small>
+</div>
+</div>
+</td>
+<td><span class="status-badge status-submitted">Submitted</span></td>
+<td>
+<div class="priority-indicator priority-medium">
+<span class="priority-dot"></span>
+<span>Medium</span>
+</div>
+</td>
+<td>Jan 14, 2025</td>
+<td>Jan 28, 2025</td>
+<td>
+<div class="table-actions">
+<button class="action-btn primary" onclick="openReviewModal()">Review</button>
+<button class="action-btn secondary">Assign</button>
+</div>
+</td>
+</tr>
+<tr>
+<td><strong>SYR-2025-00122</strong></td>
+<td>
+<div class="company-info">
+<div class="company-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">ME</div>
+<div class="company-details">
+<strong>Middle East Oil</strong>
+<small>Regional Operator</small>
+</div>
+</div>
+</td>
+<td><span class="status-badge status-changes">Changes Requested</span></td>
+<td>
+<div class="priority-indicator priority-low">
+<span class="priority-dot"></span>
+<span>Low</span>
+</div>
+</td>
+<td>Jan 10, 2025</td>
+<td>Jan 30, 2025</td>
+<td>
+<div class="table-actions">
+<button class="action-btn primary" onclick="openReviewModal()">Review</button>
+<button class="action-btn secondary">History</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Charts Section -->
+<div class="charts-grid">
+<div class="chart-card">
+<div class="chart-header">
+<h3 class="chart-title">Application Trends</h3>
+<select style="border: 1px solid #e9ecef; padding: 5px; border-radius: 4px;">
+<option>Last 30 days</option>
+<option>Last 3 months</option>
+<option>Last year</option>
+</select>
+</div>
+<div class="chart-container">
+<canvas id="trendsChart"></canvas>
+</div>
+</div>
+<div class="chart-card">
+<div class="chart-header">
+<h3 class="chart-title">Review Performance</h3>
+</div>
+<div class="chart-container">
+<canvas id="performanceChart"></canvas>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Review Modal -->
+<div class="modal-overlay" id="reviewModal">
+<div class="modal">
+<div class="modal-header">
+<h3 class="modal-title">Application Review - SYR-2025-00124</h3>
+<button class="modal-close" onclick="closeReviewModal()">✕</button>
+</div>
+<div class="modal-body">
+<div class="review-tabs">
+<button class="review-tab active" onclick="switchTab('overview')">Overview</button>
+<button class="review-tab" onclick="switchTab('technical')">Technical Review</button>
+<button class="review-tab" onclick="switchTab('financial')">Financial Review</button>
+<button class="review-tab" onclick="switchTab('documents')">Documents</button>
+<button class="review-tab" onclick="switchTab('history')">History</button>
+</div>
+<!-- Overview Tab -->
+<div class="review-section active" id="overview-section">
+<h4 style="margin-bottom: 20px;">Company Information</h4>
+<div class="info-grid">
+<div class="info-item">
+<div class="info-label">Company Name</div>
+<div class="info-value">PetroTech Solutions</div>
+</div>
+<div class="info-item">
+<div class="info-label">Registration Number</div>
+<div class="info-value">REG-2024-00156</div>
+</div>
+<div class="info-item">
+<div class="info-label">Nationality</div>
+<div class="info-value">International Joint Venture</div>
+</div>
+<div class="info-item">
+<div class="info-label">Stock Market Listed</div>
+<div class="info-value">Yes - NYSE</div>
+</div>
+</div>
+<h4 style="margin: 25px 0 20px;">Key Metrics</h4>
+<div class="info-grid">
+<div class="info-item">
+<div class="info-label">Current Oil Production</div>
+<div class="info-value">75,000 bbl/day</div>
+</div>
+<div class="info-item">
+<div class="info-label">Operated Projects</div>
+<div class="info-value">12 Projects</div>
+</div>
+<div class="info-item">
+<div class="info-label">Credit Rating</div>
+<div class="info-value">BBB+ (S&amp;P)</div>
+</div>
+<div class="info-item">
+<div class="info-label">Total Assets</div>
+<div class="info-value">$2.5 Billion</div>
+</div>
+</div>
+<h4 style="margin: 25px 0 20px;">Recent Activity</h4>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<div class="timeline-time">Jan 15, 2025 - 10:30 AM</div>
+<div class="timeline-text">Application submitted by company</div>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<div class="timeline-time">Jan 15, 2025 - 2:00 PM</div>
+<div class="timeline-text">Assigned to review team</div>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<div class="timeline-time">Jan 16, 2025 - 9:00 AM</div>
+<div class="timeline-text">Document verification completed</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Review Tab -->
+<div class="review-section" id="technical-section">
+<h4 style="margin-bottom: 20px;">Technical Assessment</h4>
+<div class="scoring-grid">
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Production Capacity</span>
+<span class="score-value">85</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="85"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Technical Expertise</span>
+<span class="score-value">90</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="90"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Recovery Technologies</span>
+<span class="score-value">75</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="75"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">HSE Compliance</span>
+<span class="score-value">95</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="95"/>
+</div>
+</div>
+<div class="review-comments">
+<h4 style="margin-bottom: 10px;">Technical Review Comments</h4>
+<textarea class="comment-box" placeholder="Enter your technical assessment comments...">Company demonstrates strong technical capabilities with proven track record in enhanced oil recovery technologies. Experience in carbonate reservoirs is particularly relevant for Syrian fields.</textarea>
+</div>
+</div>
+<!-- Financial Review Tab -->
+<div class="review-section" id="financial-section">
+<h4 style="margin-bottom: 20px;">Financial Assessment</h4>
+<div class="scoring-grid">
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Financial Stability</span>
+<span class="score-value">88</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="88"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Capital Resources</span>
+<span class="score-value">92</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="92"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Credit Rating</span>
+<span class="score-value">80</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="80"/>
+</div>
+<div class="score-item">
+<div class="score-header">
+<span class="score-label">Cash Flow</span>
+<span class="score-value">85</span>
+</div>
+<input class="score-slider" max="100" min="0" type="range" value="85"/>
+</div>
+</div>
+<div class="review-comments">
+<h4 style="margin-bottom: 10px;">Financial Review Comments</h4>
+<textarea class="comment-box" placeholder="Enter your financial assessment comments...">Strong financial position with healthy cash flows and acceptable debt-to-equity ratio. Credit rating of BBB+ indicates good creditworthiness. Sufficient capital for proposed operations.</textarea>
+</div>
+</div>
+<!-- Documents Tab -->
+<div class="review-section" id="documents-section">
+<h4 style="margin-bottom: 20px;">Document Verification</h4>
+<table style="width: 100%;">
+<thead>
+<tr style="background: #f8f9fa;">
+<th style="padding: 12px; text-align: left;">Document Type</th>
+<th style="padding: 12px; text-align: left;">Status</th>
+<th style="padding: 12px; text-align: left;">Uploaded</th>
+<th style="padding: 12px; text-align: left;">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px;">Introduction Letter</td>
+<td style="padding: 12px;"><span class="status-badge status-approved">Verified</span></td>
+<td style="padding: 12px;">Jan 15, 2025</td>
+<td style="padding: 12px;"><button class="action-btn secondary">View</button></td>
+</tr>
+<tr>
+<td style="padding: 12px;">Company Profile</td>
+<td style="padding: 12px;"><span class="status-badge status-approved">Verified</span></td>
+<td style="padding: 12px;">Jan 15, 2025</td>
+<td style="padding: 12px;"><button class="action-btn secondary">View</button></td>
+</tr>
+<tr>
+<td style="padding: 12px;">Financial Statements (3 years)</td>
+<td style="padding: 12px;"><span class="status-badge status-approved">Verified</span></td>
+<td style="padding: 12px;">Jan 15, 2025</td>
+<td style="padding: 12px;"><button class="action-btn secondary">View</button></td>
+</tr>
+<tr>
+<td style="padding: 12px;">Legal Documents</td>
+<td style="padding: 12px;"><span class="status-badge status-reviewing">Under Review</span></td>
+<td style="padding: 12px;">Jan 15, 2025</td>
+<td style="padding: 12px;"><button class="action-btn secondary">View</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- History Tab -->
+<div class="review-section" id="history-section">
+<h4 style="margin-bottom: 20px;">Review History</h4>
+<p style="color: #6c757d;">No previous review history for this application.</p>
+</div>
+</div>
+<div class="modal-footer">
+<div>
+<span style="color: #6c757d; font-size: 14px;">Overall Score: </span>
+<span style="font-size: 24px; font-weight: 700; color: var(--secondary);">86/100</span>
+</div>
+<div class="decision-buttons">
+<button class="decision-btn request-changes">Request Changes</button>
+<button class="decision-btn reject">Reject</button>
+<button class="decision-btn approve">Approve</button>
+</div>
+</div>
+</div>
+</div>
+
+<script src="assets/app.js"></script></body>
+</html>
